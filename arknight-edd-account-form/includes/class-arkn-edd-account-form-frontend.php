@@ -81,12 +81,12 @@ class Arknight_EDD_Account_Form_Frontend {
 
 				<div class="arkn-selector-group">
 					<h3><?php esc_html_e( 'کاراکتر 6 ستاره', 'arknight-edd-account-form' ); ?></h3>
-					<?php echo wp_kses_post( $this->render_image_checkbox_list( 'selected_characters', $this->admin->get_character_images() ) ); ?>
+					<?php echo $this->render_image_checkbox_list( 'selected_characters', $this->admin->get_character_images() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</div>
 
 				<div class="arkn-selector-group">
 					<h3><?php esc_html_e( 'سلاح 6 ستاره', 'arknight-edd-account-form' ); ?></h3>
-					<?php echo wp_kses_post( $this->render_image_checkbox_list( 'selected_weapons', $this->admin->get_weapon_images() ) ); ?>
+					<?php echo $this->render_image_checkbox_list( 'selected_weapons', $this->admin->get_weapon_images() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</div>
 
 				<div class="arkn-field arkn-field-full">
